@@ -17,3 +17,10 @@ console.log(num1 + num2);
 // first_name
 // FirstName 
 // firstName ==> not like this 1name this is not valid
+
+// Scope of variables are Global
+
+if(true){
+var age = 23;
+}
+ console.log(age);
