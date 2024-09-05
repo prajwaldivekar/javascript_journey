@@ -24,3 +24,16 @@ if(true){
 var age = 23;
 }
  console.log(age);
+
+//  scope of let is local
+
+// if(true){
+//     var age = 23;
+//     }
+//      console.log(age);
+// can't use outside the loop
+
+// const
+// Scope -> local 
+// const value cannot change after defining.
+
