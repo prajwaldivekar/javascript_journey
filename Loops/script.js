@@ -14,3 +14,11 @@ while( r >20 ){
     console.log("hello")
     r++;
 }
+
+//DoWhile
+var num =5;
+do{
+    console.log("prajwaldivekar")
+    num++
+}
+while(num>12)
