@@ -8,10 +8,18 @@ if(age >= 18 && gender == 'male'){
 }
 
 //OR
-const date = 2;
-const day = saturday;
+const age1 = 17;
+const gender1 = 'male';
 
-if(date = 1 &&  day == saturday){
+if(age1 >= 18 || gender1 == 'male'){
     console.log("You Are adult male");
 }
+
+//NOT 
+
+const num = 5;
+if(num % 2 == 0){
+    console.log("Odd")
+}
+
 
