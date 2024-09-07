@@ -5,4 +5,10 @@
         console.log("Hello..!")   //---> Function Defining
     }
 
-    Sayhello();   //---> Function Calling
+    Sayhello()   //---> Function Calling
+
+    function add(a,b){
+          return a+b;
+    }
+    add(3,5)
+    
