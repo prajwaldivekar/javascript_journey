@@ -11,3 +11,6 @@ student.push("Om");
 
 // To find index of an element
 student.indexOf("Swarup");
+
+// To remove element in array
+student.pop();
