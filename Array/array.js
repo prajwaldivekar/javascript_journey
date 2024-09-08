@@ -8,3 +8,6 @@ student[3]='Aditya';
 
 // Add emement in array
 student.push("Om");
+
+// To find index of an element
+student.indexOf("Swarup");
