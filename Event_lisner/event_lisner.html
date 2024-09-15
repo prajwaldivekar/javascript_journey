@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1>Event Listner in Javascript</h1>
+    <!-- <h1>Event Listner in Javascript</h1> -->
 
     <!-- 1 Way to apply event listner -->
 
@@ -24,9 +24,14 @@
     </h3>
     <button onclick="oneClick()">Click Me</button> -->
 
+    <!-- 3rd way to apply event listner
     <h3 class="block">
         Hey I am learing Event Listner
     </h3>
+    <button id="click">Click Me</button> -->
+
+    4th way to add event lisnter
+    <h1 id="changeColor">Event Listner in Javascript</h1>
     <button id="click">Click Me</button>
 
     <script>
@@ -35,10 +40,21 @@
         //     console.log("That button is clicked")
         // }
 
-        const el = document.getElementById("click")
-        el.onclick = function () {
-            console.log("I an clicked")
-        }
+        // 3 way to apply event lisnter
+        // const el = document.getElementById("click")
+        // el.onclick = function () {
+        //     console.log("I an clicked")
+        // }
+
+        // 4th way to add event lisnter
+        const el =document.getElementById("click")
+        const click = document.getElementById("changeColor");
+
+        el.addEventListener("click", ()=>{
+            changeColor.style.color='red';
+        })
+        
+
 
     </script>
 </body>
