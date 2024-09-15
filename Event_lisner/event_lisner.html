@@ -17,17 +17,29 @@
     </h3> -->
     <!-- <button onclick="console.log('Hey I am clicking')">Click Me</button> -->
 
+    <!-- 2 way to apply Event Listner -->
+
+    <!-- <h3 class="block">
+        Hey I am learing Event Listner
+    </h3>
+    <button onclick="oneClick()">Click Me</button> -->
 
     <h3 class="block">
         Hey I am learing Event Listner
     </h3>
-    <button onclick="oneClick()">Click Me</button>
+    <button id="click">Click Me</button>
 
     <script>
         // 2 way to apply Event Listner
-        function oneClick() {
-            console.log("That button is clicked")
+        // function oneClick() {
+        //     console.log("That button is clicked")
+        // }
+
+        const el = document.getElementById("click")
+        el.onclick = function () {
+            console.log("I an clicked")
         }
+
     </script>
 </body>
 
