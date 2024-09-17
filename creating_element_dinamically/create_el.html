@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating element dinamically</title>
+</head>
+<body>
+    <h1>Creating Element</h1>
+    <div class="my-container"></div>
+
+    <button class="clickbutton">Click Me</button>
+    
+    <script>
+        const container =document.getElementsByClassName("my-container")
+        const button = document.getElementsByClassName("clickbutton")
+
+        button.addEventListener("click", () =>{
+            const el = document.createElement("h1")
+            el.innerText="Prajwal Divekar";
+            container.appendChild(el);
+        });
+        
+        // button.addEventListener("click", () => {
+        //     const el = document.createElement("h1");
+        //     el.innerText = "Prajwal Divekar";
+        //     container.appendChild(el);
+        // });
+        
+    </script>
+</body>
+</html>
