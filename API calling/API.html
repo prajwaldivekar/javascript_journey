@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Protest+Guerrilla&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <title>API calling</title>
+    <style>
+        body {
+            background-color: #b5efef;
+        }
+
+        #head {
+            font-family: "Protest Guerrilla", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+        }
+
+        #container {
+            padding: 30px 30px;
+            margin: 72px 541px;
+            display: block;
+            /* text-align: center; */
+            align-items: center;
+            border-radius: 24px;
+            border: 2px solid rgb(196, 243, 245);
+            /* background-color: aqua; */
+            background-color: rgb(223, 240, 240);
+        }
+        .main{
+            font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+        }
+        .font{
+            font-family: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
+
+
+    <div id="container">
+
+        <h2 id="head">Wether Info</h2>
         <input type="text" placeholder="Enter your City" id="city-input">
         <button id="Search-button">Search</button>
+
+
+        <h2 class="main">City</h2>
+        <h3 class ="font" id="city-name">india, maharastra</h3>
+        <h2 class="main">Time</h2>
+        <h4 class ="font" id="city-time">localtime</h4>
+        <h2 class="main">Temp</h2>
+        <p class ="font" id="city-temp">13</p>
     </div>
 
     <script>
         const input = document.getElementById("city-input")
         const button = document.getElementById("Search-button");
 
+        const CityName = document.getElementById("city-name");
+        const CityTime = document.getElementById("city-time");
+        const CityTemp = document.getElementById("city-temp");
+
+
         async function getData(cityName) {
-           const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=e126b0d7bc6a4da8a8304251242009&q=${cityName}&aqi=yes`);
-           return await promise.json()
+            const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=e126b0d7bc6a4da8a8304251242009&q=${cityName}&aqi=yes`);
+            return await promise.json()
         }
 
-        button.addEventListener("click", async() =>{
-           const value = input.value;
-           const result = await getData(value);
-        console.log(result)
+        button.addEventListener("click", async () => {
+            const value = input.value;
+            const result = await getData(value);
+            CityName.innerText = `${result.location.name}, ${result.location.region} - ${result.location.country}`
+
+            CityTime.innerText = result.location.localtime;
+
+
+            CityTemp.innerText = result.current.temp_f;
         })
     </script>
     <!--API Key e126b0d7bc6a4da8a8304251242009 -->
     <!-- http://api.weatherapi.com/v1/current.json?key=e126b0d7bc6a4da8a8304251242009&q=London&aqi=yes -->
 </body>
+
 </html>
