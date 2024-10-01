@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&family=Playwrite+HU:wght@100..400&family=Protest+Guerrilla&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+    <style>
+        #head{
+            font-family: "Protest Guerrilla", sans-serif;
+        }
+        #uname{
+            font-family: "Bebas Neue", sans-serif;
+        }
+    </style>
 </head>
 <body>
-   <h1> Local_storage</h1>
+   <h1 id="head"> Local_storage</h1>
    <input id="username" type="text" placeholder="Enter Your Name">
    <button id="clickButton">Click Here</button>
-   <h3>Hey..! <span id="uname">Prajwal Divekar</span> how are you...!</h3>
+   <h3>Hey..! &nbsp;<span id="uname">Prajwal Divekar</span> &nbsp;  how are you...!</h3>
 
    <script>
     const username = document.getElementById('username');
@@ -18,6 +29,7 @@
     Button.addEventListener('click',()=>{
         const value= username.value;
         localStorage.setItem('name',value);
+        location.reload();
     });
     window.addEventListener('load',()=>{
         const value = localStorage.getItem('name');
