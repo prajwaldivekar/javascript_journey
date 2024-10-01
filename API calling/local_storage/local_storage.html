@@ -9,14 +9,21 @@
    <h1> Local_storage</h1>
    <input id="username" type="text" placeholder="Enter Your Name">
    <button id="clickButton">Click Here</button>
+   <h3>Hey..! <span id="uname">Prajwal Divekar</span> how are you...!</h3>
 
    <script>
     const username = document.getElementById('username');
     const Button =document.getElementById('clickButton');
+    const uname =document.getElementById('uname');
     Button.addEventListener('click',()=>{
         const value= username.value;
         localStorage.setItem('name',value);
     });
+    window.addEventListener('load',()=>{
+        const value = localStorage.getItem('name');
+        uname.innerText=value;
+    });
+
    </script>
 </body>
 </html>
