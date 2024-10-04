@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Clock</title>
 </head>
+
 <body>
     <div>
         <h1 id="time">
 
         </h1>
+        <button id="button">Stop button</button>
     </div>
 
     <script>
@@ -20,18 +23,21 @@
         //      console.log(time);
         //  }
         //  showTime();
+        const button = document.getElementById("button");
+        function showTime() {
+            const currentTime = new Date();
+            const time = `${currentTime.getHours()}: ${currentTime.getMinutes()}:${currentTime.getSeconds()}`
+            document.getElementById("time").innerHTML = time;
+            console.log(time);
 
-         function showTime(){
-             const currentTime= new Date();
-              const time= `${currentTime.getHours()}: ${currentTime.getMinutes()}:${currentTime.getSeconds()}`
-              document.getElementById("time").innerHTML=time;
-              console.log(time);
-            
-         }
-         showTime();
+        }
+        let interval = setInterval(showTime, 1000);
 
+        button.addEventListener("click", () => {
+            clearInterval(interval);
+        })
 
-        
     </script>
 </body>
+
 </html>
