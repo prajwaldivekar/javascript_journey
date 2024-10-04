@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Clock</title>
+</head>
+<body>
+    <div>
+        <h1 id="time">
+
+        </h1>
+    </div>
+
+    <script>
+        //  function showTime(){
+        //      const currentTime = new Date();
+        //      const Time= `${currentTime.getHours()}: ${currentTime.getMinutes()}:${currentTime.getSeconds()}`
+        //      document.getElementById(time).innerText=Time;
+        //      console.log(time);
+        //  }
+        //  showTime();
+
+         function showTime(){
+             const currentTime= new Date();
+              const time= `${currentTime.getHours()}: ${currentTime.getMinutes()}:${currentTime.getSeconds()}`
+              document.getElementById("time").innerHTML=time;
+              console.log(time);
+            
+         }
+         showTime();
+
+
+        
+    </script>
+</body>
+</html>
