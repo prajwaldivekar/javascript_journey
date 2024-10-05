@@ -23,6 +23,22 @@
      add(2)(1)(4);
      console.log(add(2)(1)(4));
 
+    //  Practical uses of Curring
+
+    function sendAutoEmail(to){
+        return function (subject){
+            return function (body){
+                console.log(`Sending email to ${to} with subject ${subject}:${body}`);
+            };
+        };
+    }
+    let step1= sendAutoEmail("prajwaldivekar2007@gmail.com")
+    let step2 = step1("New order conformation")
+    step2("Hey...!, Prajwal here is something for you.") 
+
+    // Output
+    // Sending email to prajwaldivekar2007@gmail.com with subject New order conformation:Hey...!, Prajwal here is something for you.
+
     </script>
 </body>
 </html>
