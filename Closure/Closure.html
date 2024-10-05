@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clousre</title>
+</head>
+<body>
+    <h1>Clousre in javascript</h1>
+    <p><h2>What is a Closure?</h2>
+        <h3>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).</h3></p>
+
+    <script>
+
+      function main(){
+        const name = "advitdivekar"
+        function sayName(){
+            console.log(name);
+        }
+        sayName();
+      }
+      main();
+
+
+    //   Practical use of clousre
+
+    function adder(num){
+        function add(b){
+            console.log(num + b);
+        }
+        return add;
+    }
+    const addTo5= adder(5);
+    addTo5(1);
+    </script>
+</body>
+</html>
