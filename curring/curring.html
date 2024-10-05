@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curring in javascript</title>
+</head>
+<body>
+
+    <h1>Curring in javascript</h1>
+
+    <script>
+
+// Curried functions are constructed by chaining closures and by defining and immediately returning their inner functions simultaneously.
+
+     function add (a){
+      return  function (b){
+        return function(c){
+            return a+b+c;
+        };
+      };
+     };
+     add(2)(1)(4);
+     console.log(add(2)(1)(4));
+
+    </script>
+</body>
+</html>
