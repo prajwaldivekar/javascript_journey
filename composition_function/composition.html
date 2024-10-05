@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compostion function in javascript</title>
+</head>
+<body>
+    <h1>Compostion function in javascript</h1>
+
+    <script>
+        function add(a,b){
+            return a+b;
+        }
+
+        function square(value){
+            return value*value;
+        }
+
+        function addTwoabdSquare(a,b){
+           return square(add(a,b));
+        }
+        const addResult =add(2,5);
+        console.log(square(addResult));
+    </script>
+</body>
+</html>
