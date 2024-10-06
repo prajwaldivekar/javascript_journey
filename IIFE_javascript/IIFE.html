@@ -9,12 +9,41 @@
     <h1>IIFE in javascript</h1>
 
     <script>
+        // Immediately Invoked Function Expressions (IIFE)
+        // Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they are defined. They are typically used to create a local scope for variables to prevent them from polluting the global scope.
+
+        //   Syntax:
+
+        //  (function (){ 
+        //    // Function Logic Here. 
+        //  })();
+
         (function say(){
             console.log("Hey..!");
         })();
         (function add(a,b){
          console.log(  a+b);
         })(2,3);
-    </script>
+
+        // Practical Example of IIFE
+
+        const atm = function (initalBalance){
+            let balance = initalBalance;
+            function withdraw(amount){
+                if(amount > balance){
+                    return " Sorry your balance is low";
+                }
+                else{
+                    balance-=amount;
+                    return balance;
+                }
+            }
+            return {withdraw};
+        }
+
+        const Prajwal = atm(2000);
+        console.log(Prajwal.withdraw(999));
+        
+        </script>
 </body>
 </html>
