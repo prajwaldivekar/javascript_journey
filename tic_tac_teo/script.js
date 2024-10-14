@@ -15,7 +15,12 @@ function CheckWinner(){
         (arr[2] !== null && arr[2] == arr[4] && arr[4] == arr[6]) 
        )
     {
-       console.log(CurrentPlayer);
+       document.write(`The Winner is ${CurrentPlayer}`)
+       return;
+    }
+    if(!arr.some((e)=> e === null)){
+        document.write("Game is drow...!!")
+        return;
     }
     
     
@@ -24,10 +29,11 @@ function CheckWinner(){
 
 function handleClick(el){
     const id = Number(el.id);
-    if (arr[id] != null) return ;
+    if (arr[id] !== null) return ;
     arr[id]= CurrentPlayer;
     el.innerText = CurrentPlayer;
+    CheckWinner();
     CurrentPlayer = CurrentPlayer === "X" ? "O" : "X";
-    console.log(arr)
+    
     
 }
