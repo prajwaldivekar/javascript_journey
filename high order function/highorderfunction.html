@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>High order function</h1>
+    <script>
+
+        // high order function 
+        // high order function is a funtion that take function as a argument
+
+     const add = (a,b,addtion)=>{
+        let result = a + b
+        addtion(result)
+
+     }
+     add(2,3,(res) =>{
+        console.log("this is result ", res)
+     })
+
+    </script>
+</body>
+
+</html>
